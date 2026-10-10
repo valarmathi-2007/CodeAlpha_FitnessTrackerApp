@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitTrack - Fitness Tracker</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1>💪 FitTrack</h1>
+  <div class="stats">
+    <div class="card"><h3 id="totalSteps">0</h3><p>Steps</p></div>
+    <div class="card"><h3 id="totalCal">0</h3><p>Calories</p></div>
+    <div class="card"><h3 id="totalWork">0</h3><p>Min Workout</p></div>
+  </div>
+
+  <div class="progress-box">
+    <p>Daily Goal: 10000 Steps</p>
+    <div class="progress"><div id="progressBar"></div></div>
+  </div>
+
+  <canvas id="weeklyChart" height="150"></canvas>
+
+  <div class="form-box">
+    <h3>Add Today's Activity</h3>
+    <select id="exercise"><option>Running</option><option>Gym</option><option>Yoga</option><option>Cycling</option><option>Walking</option></select>
+    <input type="number" id="steps" placeholder="Steps (ex: 5000)">
+    <input type="number" id="calories" placeholder="Calories Burned">
+    <input type="number" id="minutes" placeholder="Workout Minutes">
+    <button onclick="addData()">Add Data</button>
+  </div>
+
+  <div id="logList"></div>
+</div>
+<script src="script.js"></script>
+</div>
+</body>
+</html>
